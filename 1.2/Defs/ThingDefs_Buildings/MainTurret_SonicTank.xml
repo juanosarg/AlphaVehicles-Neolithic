@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.CannonDef>
+		<defName>AV_SonicTank_turret</defName>
+		<label>sonic tank turret</label>
+		<weaponType>Rotatable</weaponType>
+		<weaponLocation>Turret</weaponLocation>
+		<moteCannon>Mote_CannonSmoke</moteCannon>
+		<moteFlash>Mote_CannonFlash</moteFlash>
+		<cannonSound>Explosion_PirateCannon</cannonSound>
+		<reloadSound>Artillery_ShellLoaded</reloadSound>
+		
+		<projectile>MarkX_MkXA</projectile>
+		
+		<reloadTimer>5</reloadTimer>
+		<warmUpTimer>2</warmUpTimer>
+		<magazineCapacity>1</magazineCapacity>
+		<recoil>0.2</recoil>
+		
+		<attachProjectileFlag>Tank</attachProjectileFlag>
+		
+		<!-- (shotsPerBurst, ticksBetweenShots, ticksBetweenBursts, fireModeLabel, texPath) -->
+		<fireModes>
+			<li>(1, 0, 0, Single, UI/Gizmos/FireRate_Single)</li>
+		</fireModes>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>0.5</rotationSpeed>
+		
+		<gizmoDescription>Select Target.\n\nFire for effect</gizmoDescription>
+		
+		<graphicData>
+			<texPath>Vehicles/Land/AV_SonicTank/AV_SonicTank_turret</texPath>
+			<graphicClass>Vehicles.Graphic_Cannon</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(5, 5)</drawSize>
+		</graphicData>
+		
+		<baseCannonTexPath/>
+
+		<ammoAllowed>
+			<li>MarkX_Mk6A_Shell</li>
+			<li>MarkX_MkXA_Shell</li>
+		</ammoAllowed>
+		
+		<projectileOffset>3</projectileOffset>
+		<hitFlags>IntendedTarget</hitFlags>
+		<spreadRadius>1</spreadRadius>
+		<maxRange>-1</maxRange>
+		<minRange>15</minRange>
+	</Vehicles.CannonDef>
+</Defs>

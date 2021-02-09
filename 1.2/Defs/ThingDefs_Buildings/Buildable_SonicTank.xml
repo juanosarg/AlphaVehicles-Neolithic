@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_SonicTank_Blueprint</defName>
+		<label>Sonic Tank</label>
+		<description>A heavily armored combat vehicle.</description>
+		<graphicData>
+			<texPath>Vehicles/Land/AV_SonicTank/AV_SonicTank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>20000</MaxHitPoints>
+			<WorkToBuild>30</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		<size>(3,5)</size>
+		
+		<researchPrerequisites/>
+		
+		<costList>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<Steel>100</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>AV_SonicTank</thingToSpawn>
+		<soundBuilt>ShipBigConstruction</soundBuilt>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+</Defs>
