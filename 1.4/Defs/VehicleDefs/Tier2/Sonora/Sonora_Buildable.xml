@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_SonicTank_Blueprint</defName>
+		<label>Sonora</label>
+		<description>todo.</description>
+		
+		<designationCategory>VVE_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier2/AV_SonicTank/AV_SonicTank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		<size>(3,5)</size>
+		
+		<researchPrerequisites>
+			<li>VVE_CombatVehicles</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<VVE_EngineBlock>1</VVE_EngineBlock>
+			<VVE_CarAlternator>2</VVE_CarAlternator>
+			<VVE_CarExhaust>4</VVE_CarExhaust>
+			<VVE_CarSuspension>10</VVE_CarSuspension>
+			<VVE_CarWheel>14</VVE_CarWheel>
+			<Steel>440</Steel>
+			<ComponentIndustrial>16</ComponentIndustrial>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<thingToSpawn>AV_SonicTank</thingToSpawn>
+		
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+</Defs>

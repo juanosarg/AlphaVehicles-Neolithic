@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>AV_SonicBurst</defName>
+		<label>sonic burst</label>
+		<graphicData>
+			<texPath>UI/Empty/Empty_east</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+			
+		</graphicData>
+		<thingClass>AlphaVehicles.Projectile_Distortion</thingClass>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<explosionRadius>2.9</explosionRadius>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>2</armorPenetrationBase>
+			<speed>20</speed>
+			<soundExplode>Interact_Ignite</soundExplode>
+			
+		</projectile>
+	</ThingDef>
+
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>AV_SonicTank_MainTurret</defName>
+		<label>sonic tank turret</label>
+		<turretType>Rotatable</turretType>
+		
+		<shotSound>AV_Shot_SonicTankSound</shotSound>
+		<reloadSound>VVE_BulldogReloadSound</reloadSound>
+		
+		<projectile>AV_SonicBurst</projectile>
+		<reloadTimer>7</reloadTimer>
+		<warmUpTimer>3.4</warmUpTimer>
+		<magazineCapacity>1</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+	<genericAmmo>true</genericAmmo>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>1.2</rotationSpeed>
+		
+		<projectileOffset>5.25</projectileOffset>
+		<hitFlags>IntendedTarget</hitFlags>
+		<maxRange>25</maxRange>
+		<minRange>3</minRange>
+		
+		<attachProjectileFlag>VVE_Tank</attachProjectileFlag>
+		
+		<recoil>
+			<distanceTotal>0.6</distanceTotal>
+			<distancePerTick>0.2</distancePerTick>
+			<speedMultiplierPostRecoil>0.35</speedMultiplierPostRecoil>
+		</recoil>
+		
+		<vehicleRecoil>
+			<distanceTotal>0.1</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
+		</vehicleRecoil>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenBursts>1</ticksBetweenBursts>
+				<spreadRadius>0</spreadRadius>
+				<label>Single Shot</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier2/AV_SonicTank/AV_SonicTank_turret/AV_SonicTank_turret</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(6, 6)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>Uranium</li>
+			</thingDefs>
+		</ammunition>
+		
+		<motes>
+			<li>
+				<cycles>1</cycles>
+				<moteDef>Mote_CannonPlume</moteDef>
+				<animationType>Reset</animationType>
+			</li>
+		</motes>
+	</Vehicles.VehicleTurretDef>
+</Defs>
