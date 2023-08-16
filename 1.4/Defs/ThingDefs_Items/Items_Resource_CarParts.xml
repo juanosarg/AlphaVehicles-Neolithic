@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <ThingDef ParentName="VVE_CarPartBase">
+    <defName>AV_EnergyCells</defName>
+    <label>energy cell</label>
+    <description>Energy cells are miniaturized RTGs capable of storing large amounts of electrical chanrge. Used as ammo.</description>
+    <graphicData>
+      <texPath>Things/Items/AV_EnergyCells</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>95</MarketValue>
+      <Mass>4</Mass>
+	  <WorkToMake>100</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>1</Steel>
+      <Uranium>1</Uranium>
+    </costList>
+	 <recipeMaker Inherit="false" />
+  </ThingDef>
+  
+ 
+  
+</Defs>

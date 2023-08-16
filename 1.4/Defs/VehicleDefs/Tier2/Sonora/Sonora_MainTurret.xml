@@ -15,7 +15,7 @@
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bomb</damageDef>
 			<damageAmountBase>50</damageAmountBase>
-			<explosionRadius>2.9</explosionRadius>
+			<explosionRadius>3.9</explosionRadius>
 			<stoppingPower>2</stoppingPower>
 			<armorPenetrationBase>2</armorPenetrationBase>
 			<speed>20</speed>
@@ -81,7 +81,7 @@
 		
 		<ammunition>
 			<thingDefs>
-				<li>Uranium</li>
+				<li>AV_EnergyCells</li>
 			</thingDefs>
 		</ammunition>
 		
