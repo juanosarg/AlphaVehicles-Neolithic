@@ -7,7 +7,7 @@
 	<!-- Vehicle stats -->
 
 	<AV_VehicleTier>Tier</AV_VehicleTier>
-	<AV_Tier1>Tier 0</AV_Tier1>
+	<AV_Tier0>Tier 0</AV_Tier0>
 	<AV_Tier1>Tier 1</AV_Tier1>
 	<AV_Tier2>Tier 2</AV_Tier2>
 	
