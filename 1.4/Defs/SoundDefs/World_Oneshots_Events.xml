@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+  <SoundDef>
+    <defName>AV_Horse</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>AV_Horse</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>22~30</volumeRange>      
+        <pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+    <SoundDef>
+    <defName>AV_Wagon</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>AV_Wagon</clipFolderPath>
+          </li>
+        </grains>      
+         <volumeRange>22~30</volumeRange>      
+        <pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+     <SoundDef>
+    <defName>AV_Wind</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>AV_Wind</clipFolderPath>
+          </li>
+        </grains>      
+         <volumeRange>22~30</volumeRange>      
+        <pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

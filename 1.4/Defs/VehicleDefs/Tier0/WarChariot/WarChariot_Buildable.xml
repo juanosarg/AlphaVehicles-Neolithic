@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_WarChariot_Blueprint</defName>
+		<label>War chariot</label>
+		<description>The war chariot is a mobile archery platform operated by two people, with the driver steering the chariot with his reins while the main archer aims his bow and arrow at any targets within range.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Archer x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<designationCategory>VVE_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/WarChariot/AV_WarChariot</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(2,4)</size>
+		<uiIconScale>1</uiIconScale>
+				
+		<costList>
+			<WoodLog>200</WoodLog>			
+			<Steel>30</Steel>	
+			<Hay>100</Hay>			
+		</costList>
+		
+		<soundImpactDefault>AV_BulletImpact_Wood_And_Horse</soundImpactDefault>
+		
+		<thingToSpawn>AV_WarChariot</thingToSpawn>
+		
+		
+	</Vehicles.VehicleBuildDef>
+</Defs>

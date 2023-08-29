@@ -1,5 +1,5 @@
 <ModMetaData>
-	<name>Alpha Vehicles</name>
+	<name>Alpha Vehicles - Neolithic</name>
 	<author>Sarg</author>
 	<supportedVersions>
 		<li>1.4</li>
@@ -24,7 +24,7 @@
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3014906877</steamWorkshopUrl>
 		</li>
 	</modDependencies>
-	<packageId>sarg.alphavehicles</packageId>
+	<packageId>sarg.alphavehiclesneolithic</packageId>
 	<description>
 &lt;size=24&gt;Issues&lt;/size&gt;
 
@@ -37,6 +37,7 @@
 https://www.blogger.com/profile/15534511925764794495
 Sonic turret: https://freesound.org/people/Sphrea/sounds/352480/
 Plasma tank: https://sketchfab.com/3d-models/plasma-tank-67a7317ecd6a4cf08903f7db05895e83
+Wagon sounds: https://freesound.org/people/Martineerok/sounds/486410/
 
 &lt;size=24&gt;Compatibility&lt;/size&gt;
 
@@ -50,7 +51,6 @@ v0.1: Alpha
 		</description>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
-	
 		<li>brrainz.harmony</li>
 		<li>SmashPhil.VehicleFramework</li>
 		<li>OskarPotocki.VanillaVehiclesExpanded</li>

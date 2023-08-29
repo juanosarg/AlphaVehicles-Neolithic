@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>AV_Exhausted</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>exhausted from driving</label>
+		<description>This person is driving a human-powered vehicle, and therefore getting very tired.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		
+		<stages>
+			<li>
+				<hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+				<restFallFactorOffset>1.5</restFallFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	
+</Defs>

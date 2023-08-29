@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_Chariot_Blueprint</defName>
+		<label>Chariot</label>
+		<description>A simple horse-driven cart that provides fast transportation. The chariot is outrageously bad for offroading, so you'll need some roads between your origin and your destination for it to be really effective.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<designationCategory>VVE_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Chariot/AV_Chariot</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(2,4)</size>
+		<uiIconScale>1</uiIconScale>
+				
+		<costList>
+			<WoodLog>150</WoodLog>			
+			<Steel>10</Steel>	
+			<Hay>100</Hay>			
+		</costList>
+		
+		<soundImpactDefault>AV_BulletImpact_Wood_And_Horse</soundImpactDefault>
+		
+		<thingToSpawn>AV_Chariot</thingToSpawn>
+		
+		
+	</Vehicles.VehicleBuildDef>
+</Defs>

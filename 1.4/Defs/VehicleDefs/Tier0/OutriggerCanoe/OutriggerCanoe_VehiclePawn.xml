@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_OutriggerCanoe</defName>
+		<label>Outrigger Canoe</label>
+		<description>A watercraft featuring a lateral support float known as an outrigger, which is fastened to one of the sides of the main hull. An outrigger generates stability as a result of the distance between its hulls rather than due to the shape of each individual hull. As such, the hulls of outrigger boats are typically longer, narrower and more hydrodynamically efficient.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x1</description>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/OutriggerCanoe/AV_OutriggerCanoe</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_OutriggerCanoe_Blueprint</buildDef>
+		
+		<size>(2,4)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>200</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>80</Mass>
+			<MoveSpeed>6</MoveSpeed>
+			<CargoCapacity>70</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		
+		
+		<race>
+			<baseBodySize>1.55</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>true</fishing>
+			
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<worldSpeedMultiplier>0.9</worldSpeedMultiplier>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<exposed>true</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					<pawnRenderer>
+						<layerNorth>3</layerNorth>
+						<layerSouth>1</layerSouth>
+						<layerEast>1</layerEast>
+						
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<northEast>East</northEast>
+						<southEast>East</southEast>
+						<southWest>West</southWest>
+						<northWest>West</northWest>
+						
+						<drawOffsetNorth>(-0.4, 0, -0.75)</drawOffsetNorth>
+						<drawOffsetSouth>(0.4, 0, 1.2)</drawOffsetSouth>
+						<drawOffsetEast>(-0.55, 0, 0.6)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>1</slots>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>BodyNoOverlap</side>
+						<noOverlapWith>
+							<li>Back</li>
+						</noOverlapWith>
+					</hitbox>
+					
+					<pawnRenderer>
+						<layerNorth>3</layerNorth>
+						<layerSouth>2</layerSouth>
+						<layerEast>2</layerEast>
+						
+						
+						
+						<drawOffsetNorth>(0.4, 0, -0.65)</drawOffsetNorth>
+						<drawOffsetSouth>(-0.4, 0, 1.2)</drawOffsetSouth>
+						<drawOffsetEast>(-0.55,0, -0.1)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>Sail</key>
+				<label>Sail</label>
+				<health>50</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				
+			</li>
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Left</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Outrigger</key>
+				<label>Outrigger</label>
+				<health>40</health>
+				<depth>External</depth>
+				
+				<hitbox>
+					<side>Right</side>
+				</hitbox>
+			</li>
+		</components>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>

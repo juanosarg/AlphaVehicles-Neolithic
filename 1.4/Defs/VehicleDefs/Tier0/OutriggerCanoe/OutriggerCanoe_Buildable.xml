@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBoatBaseBuildable">
+		<defName>AV_OutriggerCanoe_Blueprint</defName>
+		<label>Outrigger Canoe</label>
+		<description>A watercraft featuring a lateral support float known as an outrigger, which is fastened to one of the sides of the main hull. An outrigger generates stability as a result of the distance between its hulls rather than due to the shape of each individual hull. As such, the hulls of outrigger boats are typically longer, narrower and more hydrodynamically efficient.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x1</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/OutriggerCanoe/AV_OutriggerCanoe</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(2, 4)</size>
+		
+	
+		
+		<costList>
+		
+			<Cloth>40</Cloth>
+			<WoodLog>240</WoodLog>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_OutriggerCanoe</thingToSpawn>
+	</Vehicles.VehicleBuildDef>
+</Defs>

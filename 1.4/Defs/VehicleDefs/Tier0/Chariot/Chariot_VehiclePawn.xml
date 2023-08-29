@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>AV_Wheelbarrow</defName>
-		<label>Wheelbarrow</label>
-		<description>The wheelbarrow: Your trusty sidekick for moving stuff from 'point A' to 'point B' with all the pizzazz of a one-wheel parade float.\n\nLook, this is just a wheelbarrow. It will allow people to carry more things on caravans. Yep. That's it.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Driver will get 50% more tired and hungry while driving this vehicle.</description>
+		<defName>AV_Chariot</defName>
+		<label>Chariot</label>
+		<description>A simple horse-driven cart that provides fast transportation. The chariot is outrageously bad for offroading, so you'll need some roads between your origin and your destination for it to be really effective.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
 		<graphicData>
-			<texPath>Things/Vehicles/Land/Tier0/Wheelbarrow/AV_Wheelbarrow</texPath>
+			<texPath>Things/Vehicles/Land/Tier0/Chariot/AV_Chariot</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(2,2)</drawSize>
-			<color>(124, 85, 62)</color>
-			<colorTwo>(97, 70, 54)</colorTwo>
-			<colorThree>(78, 56, 53)</colorThree>
-			<pattern>AV_Pattern_Wood</pattern>
+			<drawSize>(4,4)</drawSize>
+			<color>(192, 146, 94)</color>
+			<colorTwo>(193, 138, 86)</colorTwo>
+			<colorThree>(184, 119, 59)</colorThree>
+			<pattern>AV_Pattern_Wood_2</pattern>
 		</graphicData>
 		<modExtensions>
 			<li Class="VanillaVehiclesExpanded.StatExtension">
@@ -28,8 +28,8 @@
 			</li>
 		</modExtensions>
 		<fillPercent>0.5</fillPercent>
-		<buildDef>AV_Wheelbarrow_Blueprint</buildDef>
-		<size>(1,1)</size>
+		<buildDef>AV_Chariot_Blueprint</buildDef>
+		<size>(2,4)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Neolithic</techLevel>
@@ -42,33 +42,37 @@
 			<MarketValue>100</MarketValue>
 		</statBases>
 		<vehicleStats>
-			<Mass>15</Mass>
-			<MoveSpeed>4</MoveSpeed>
+			<Mass>30</Mass>
+			<MoveSpeed>8</MoveSpeed>
 			<CargoCapacity>50</CargoCapacity>
 			<RepairRate>0.75</RepairRate>
-			<AccelerationRate>0.01</AccelerationRate>
+			<AccelerationRate>0.08</AccelerationRate>
 		</vehicleStats>
 		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Horse</value>
+			</li>
 			
 		</soundOneShotsOnEvent>
 		<race>
-			<baseBodySize>1</baseBodySize>
+			<baseBodySize>2</baseBodySize>
+			<fleshType>AV_WoodenAndHorseVehicle</fleshType>
 		</race>
-		<comps>
-			<li Class="AlphaVehicles.CompProperties_AddHediffToVehiclePassenger">
-				<hediffToAdd>AV_Exhausted</hediffToAdd>
-			</li>
-		</comps>
+		
 		<properties>
-			<customRoadCosts AssignDefaults="0.7"/>
+			<winterSpeedMultiplier>3</winterSpeedMultiplier>
+			<offRoadMultiplier>2</offRoadMultiplier>
+			
+			<customRoadCosts AssignDefaults = "0.3"/>
 			<diagonalRotation>false</diagonalRotation>
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 3)</li>
+				<li>(RepairVehicle, 1)</li>
 			</vehicleJobLimitations>
 			<roles>
 				<li>
 					<key>rider</key>
-					<label>Operator</label>
+					<label>Driver</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
 					<exposed>true</exposed>
@@ -81,31 +85,57 @@
 					<pawnRenderer>
 						<layer>1</layer>
 						<layerNorth>1</layerNorth>
-						<layerSouth>-1</layerSouth>
+						<layerSouth>1</layerSouth>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
 						<angleSouthEast>0</angleSouthEast>
 						<drawOffsetNorth>(0,0,-0.75)</drawOffsetNorth>
-						<drawOffsetSouth>(0,0,0.75)</drawOffsetSouth>
-						<drawOffsetEast>(-0.75,0,0.25)</drawOffsetEast>
+						<drawOffsetSouth>(0,0,1)</drawOffsetSouth>
+						<drawOffsetEast>(-0.95,0,0.25)</drawOffsetEast>
 					</pawnRenderer>
 				</li>
 			</roles>
 		</properties>
 		<components>
 			<li>
-				<key>FrontWheel</key>
-				<label>Front Wheel</label>
-				<health>20</health>
+				<key>LeftWheel</key>
+				<label>Left Wheel</label>
+				<health>30</health>
 				<depth>External</depth>
+				
 				<armor>
-					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
 				</armor>
+				
 				<tags>
 					<li>Wheel</li>
 				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightWheel</key>
+				<label>Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
@@ -120,18 +150,42 @@
 					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
 				</armor>
 				<hitbox>
-					<side>Front</side>
+					<side>Back</side>
 				</hitbox>
 			</li>
 			<li>
-				<key>Handles</key>
-				<label>Handles</label>
-				<health>10</health>
+				<key>Horse</key>
+				<label>Horse</label>
+				<health>100</health>
 				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Horse</li>
+				</tags>
+				
+				
+				
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
 			</li>
+			
 		</components>
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Hay</fuelType>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+			</li>
+		</comps>
 	</Vehicles.VehicleDef>
 </Defs>
