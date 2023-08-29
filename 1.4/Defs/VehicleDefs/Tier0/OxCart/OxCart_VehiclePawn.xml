@@ -8,7 +8,7 @@
 			<texPath>Things/Vehicles/Land/Tier0/OxCart/AV_OxCart</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(4,4)</drawSize>
+			<drawSize>(5.5,5.5)</drawSize>
 			<color>(192, 146, 94)</color>
 			<colorTwo>(193, 138, 86)</colorTwo>
 			<colorThree>(184, 119, 59)</colorThree>
@@ -29,7 +29,7 @@
 		</modExtensions>
 		<fillPercent>0.5</fillPercent>
 		<buildDef>AV_OxCart_Blueprint</buildDef>
-		<size>(2,4)</size>
+		<size>(3,5)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Neolithic</techLevel>
@@ -90,9 +90,9 @@
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
 						<angleSouthEast>0</angleSouthEast>
-						<drawOffsetNorth>(0,0,-0.75)</drawOffsetNorth>
-						<drawOffsetSouth>(0,0,1)</drawOffsetSouth>
-						<drawOffsetEast>(-0.95,0,0.25)</drawOffsetEast>
+						<drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.25)</drawOffsetSouth>
+						<drawOffsetEast>(0,0,0.25)</drawOffsetEast>
 					</pawnRenderer>
 				</li>
 			</roles>

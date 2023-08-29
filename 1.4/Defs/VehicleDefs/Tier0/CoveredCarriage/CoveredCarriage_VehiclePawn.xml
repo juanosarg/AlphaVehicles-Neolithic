@@ -8,7 +8,7 @@
 			<texPath>Things/Vehicles/Land/Tier0/CoveredCarriage/AV_CoveredCarriage</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(6.5,6.5)</drawSize>
+			<drawSize>(5.5,5.5)</drawSize>
 			<color>(192, 146, 94)</color>
 			<colorTwo>(193, 138, 86)</colorTwo>
 			<colorThree>(184, 119, 59)</colorThree>
@@ -84,15 +84,15 @@
 					</handlingTypes>
 					<pawnRenderer>
 						<layer>1</layer>
-						<layerNorth>1</layerNorth>
-						<layerSouth>2</layerSouth>
+						<layerNorth>0</layerNorth>
+						<layerSouth>1</layerSouth>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
 						<angleSouthEast>0</angleSouthEast>
-						<drawOffsetNorth>(0,0,-0.55)</drawOffsetNorth>
-						<drawOffsetSouth>(0,0,1)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55,0,0.25)</drawOffsetEast>
+						<drawOffsetNorth>(0,0,0)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,-0.25)</drawOffsetSouth>
+						<drawOffsetEast>(0.4,0,0.75)</drawOffsetEast>
 					</pawnRenderer>
 				</li>
 				<li>

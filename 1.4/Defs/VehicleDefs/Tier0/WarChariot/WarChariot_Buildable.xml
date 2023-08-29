@@ -5,7 +5,7 @@
 		<defName>AV_WarChariot_Blueprint</defName>
 		<label>War chariot</label>
 		<description>The war chariot is a mobile archery platform operated by two people, with the driver steering the chariot with his reins while the main archer aims his bow and arrow at any targets within range.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Archer x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
-		<designationCategory>VVE_Vehicles</designationCategory>
+		<designationCategory>VF_Vehicles</designationCategory>
 		
 		<graphicData>
 			<texPath>Things/Vehicles/Land/Tier0/WarChariot/AV_WarChariot</texPath>

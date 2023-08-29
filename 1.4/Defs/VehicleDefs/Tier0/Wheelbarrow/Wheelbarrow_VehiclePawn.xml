@@ -49,6 +49,10 @@
 			<AccelerationRate>0.01</AccelerationRate>
 		</vehicleStats>
 		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wagon</value>
+			</li>
 			
 		</soundOneShotsOnEvent>
 		<race>

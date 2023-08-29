@@ -23,6 +23,11 @@
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(5,5)</drawSize>
+		
+			<color>(192, 146, 94)</color>
+			<colorTwo>(193, 138, 86)</colorTwo>
+			<colorThree>(184, 119, 59)</colorThree>
+			<pattern>AV_Pattern_Wood_2</pattern>
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
@@ -68,7 +73,7 @@
 		
 		<properties>
 			<fishing>true</fishing>
-			
+			<diagonalRotation>false</diagonalRotation>
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>1</speed>
 			</track>
@@ -94,20 +99,12 @@
 					</hitbox>
 					
 					<pawnRenderer>
-						<layerNorth>3</layerNorth>
-						<layerSouth>1</layerSouth>
-						<layerEast>1</layerEast>
 						
-						<angleNorthEast>0</angleNorthEast>
-						<angleSouthEast>0</angleSouthEast>
-						<northEast>East</northEast>
-						<southEast>East</southEast>
-						<southWest>West</southWest>
-						<northWest>West</northWest>
-						
-						<drawOffsetNorth>(-0.4, 0, -0.75)</drawOffsetNorth>
-						<drawOffsetSouth>(0.4, 0, 1.2)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55, 0, 0.6)</drawOffsetEast>
+					
+						<drawOffsetNorth>(-0.8, 0, -0.55)</drawOffsetNorth>
+						<drawOffsetSouth>(0.95, 0, 0.55)</drawOffsetSouth>
+						<drawOffsetEast>(-0.55, 0, 0.5)</drawOffsetEast>
+						<drawOffsetWest>(0.55, 0, -0.5)</drawOffsetWest>
 					</pawnRenderer>
 				</li>
 				<li>
@@ -124,15 +121,13 @@
 					</hitbox>
 					
 					<pawnRenderer>
-						<layerNorth>3</layerNorth>
+						
+						
 						<layerSouth>2</layerSouth>
-						<layerEast>2</layerEast>
-						
-						
-						
-						<drawOffsetNorth>(0.4, 0, -0.65)</drawOffsetNorth>
-						<drawOffsetSouth>(-0.4, 0, 1.2)</drawOffsetSouth>
-						<drawOffsetEast>(-0.55,0, -0.1)</drawOffsetEast>
+						<drawOffsetNorth>(-0.8, 0, 0.55)</drawOffsetNorth>
+						<drawOffsetSouth>(0.95, 0, -0.55)</drawOffsetSouth>
+						<drawOffsetEast>(0.55, 0, 0.5)</drawOffsetEast>
+						<drawOffsetWest>(-0.55, 0, -0.5)</drawOffsetWest>
 					</pawnRenderer>
 				</li>
 				
