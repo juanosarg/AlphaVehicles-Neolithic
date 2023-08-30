@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
-		<defName>AV_Chariot</defName>
-		<label>Chariot</label>
-		<description>A simple horse-driven cart that provides fast transportation. The chariot is outrageously bad for offroading, so you'll need some roads between your origin and your destination for it to be really effective.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<defName>AV_DogSled</defName>
+		<label>Dog Sled</label>
+		<description>A sled pulled by four trained dogs used to travel over ice and through snow. Absolutely terrible for anything else.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Kibble\n\n&lt;color=#bb8f04&gt;Warning:&lt;/color&gt; Due to a current limitation, "rough" stone surfaces will be considered ice for the purposes of this vehicle. Most other vanilla and Alpha Biomes terrains should work fine.</description>
 		<graphicData>
-			<texPath>Things/Vehicles/Land/Tier0/Chariot/AV_Chariot</texPath>
+			<texPath>Things/Vehicles/Land/Tier0/DogSled/AV_DogSled</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(4,4)</drawSize>
-			<color>(192, 146, 94)</color>
-			<colorTwo>(193, 138, 86)</colorTwo>
-			<colorThree>(184, 119, 59)</colorThree>
-			<pattern>AV_Pattern_Wood_2</pattern>
+			<drawSize>(7,7)</drawSize>
+			<color>(71, 71, 71)</color>
+			<colorTwo>(100, 100, 100)</colorTwo>
+			<colorThree>(50, 50, 50)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
 		</graphicData>
 		<modExtensions>
 			<li Class="VanillaVehiclesExpanded.StatExtension">
@@ -29,13 +29,13 @@
 				<statDescriptions>
 					<li>AV_Tier0Desc</li>
 					<li>AV_TractionAnimalDesc</li>
-					<li>AV_Fuel5-100Desc</li>
+					<li>AV_Fuel5-100KibbleDesc</li>
 				</statDescriptions>
 			</li>
 		</modExtensions>
 		<fillPercent>0.5</fillPercent>
-		<buildDef>AV_Chariot_Blueprint</buildDef>
-		<size>(2,4)</size>
+		<buildDef>AV_DogSled_Blueprint</buildDef>
+		<size>(2,7)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Neolithic</techLevel>
@@ -57,24 +57,89 @@
 		<soundOneShotsOnEvent Inherit="false">
 			<li>
 				<key>MoveStart</key>
-				<value>AV_Horse</value>
+				<value>AV_Sled</value>
 			</li>
 			
 		</soundOneShotsOnEvent>
 		<race>
 			<baseBodySize>2</baseBodySize>
-			<fleshType>AV_WoodenAndHorseVehicle</fleshType>
+			<fleshType>AV_WoodenAndDogVehicle</fleshType>
 		</race>
 		
 		<properties>
-			<winterSpeedMultiplier>3</winterSpeedMultiplier>
-			<offRoadMultiplier>5</offRoadMultiplier>
-			
-			<customRoadCosts AssignDefaults = "0.3"/>
+			<winterSpeedMultiplier>0</winterSpeedMultiplier>
+			<offRoadMultiplier>2</offRoadMultiplier>
+			<customSnowCategoryTicks AssignDefaults = "0"/>
+			<customRoadCosts AssignDefaults = "1"/>
 			<diagonalRotation>false</diagonalRotation>
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 1)</li>
 			</vehicleJobLimitations>
+			
+			<customBiomeCosts>
+				<li>
+					<key>Tundra</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>IceSheet</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>BorealForest</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>ColdBog</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SeaIce</key>
+					<value>1</value>
+				</li>
+			</customBiomeCosts>
+			<customTerrainCosts Inherit="false">
+				<li>
+					<key>Ice</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>Soil</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>Granite_Rough</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>MossyTerrain</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>MarshyTerrain</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>SoilRich</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>Gravel</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>Sand</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>SoftSand</key>
+					<value>50</value>
+				</li>
+				<li>
+					<key>Mud</key>
+					<value>50</value>
+				</li>
+			</customTerrainCosts>
 			<roles>
 				<li>
 					<key>rider</key>
@@ -105,8 +170,8 @@
 		</properties>
 		<components>
 			<li>
-				<key>LeftWheel</key>
-				<label>Left Wheel</label>
+				<key>FrontLeftDog</key>
+				<label>Front Left Dog</label>
 				<health>30</health>
 				<depth>External</depth>
 				
@@ -116,7 +181,7 @@
 				</armor>
 				
 				<tags>
-					<li>Wheel</li>
+					<li>Dog</li>
 				</tags>
 				
 				
@@ -126,8 +191,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>RightWheel</key>
-				<label>Right Wheel</label>
+				<key>FrontRightDog</key>
+				<label>Front Right Dog</label>
 				<health>30</health>
 				<depth>External</depth>
 				
@@ -137,7 +202,49 @@
 				</armor>
 				
 				<tags>
-					<li>Wheel</li>
+					<li>Dog</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RearLeftDog</key>
+				<label>Rear Left Dog</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Dog</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RearRightDog</key>
+				<label>Rear Right Dog</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Dog</li>
 				</tags>
 				
 				
@@ -159,35 +266,12 @@
 					<side>Back</side>
 				</hitbox>
 			</li>
-			<li>
-				<key>Horse</key>
-				<label>Horse</label>
-				<health>100</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0</ArmorRating_Sharp>
-				</armor>
-				
-				<tags>
-					<li>Horse</li>
-				</tags>
-				
-				
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-				<hitbox>
-					<side>Front</side>
-				</hitbox>
-			</li>
+			
 			
 		</components>
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>Hay</fuelType>
+				<fuelType>Kibble</fuelType>
 				<fuelConsumptionRate>5</fuelConsumptionRate>
 				<fuelCapacity>100</fuelCapacity>
 				<fuelConsumptionCondition>Always</fuelConsumptionCondition>

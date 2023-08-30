@@ -51,5 +51,22 @@
       </li>
     </subSounds>
   </SoundDef>
+  
+   <SoundDef>
+    <defName>AV_Sled</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>AV_Sled</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16~22.17392</volumeRange>      
+        <pitchRange>0.97~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 
 </Defs>

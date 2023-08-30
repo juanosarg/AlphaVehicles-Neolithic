@@ -24,9 +24,9 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(5,5)</drawSize>
 		
-			<color>(192, 146, 94)</color>
-			<colorTwo>(193, 138, 86)</colorTwo>
-			<colorThree>(184, 119, 59)</colorThree>
+			<color>(191, 178, 163)</color>
+			<colorTwo>(192, 168, 145)</colorTwo>
+			<colorThree>(170, 146, 122)</colorThree>
 			<pattern>AV_Pattern_Wood_2</pattern>
 		</graphicData>
 		

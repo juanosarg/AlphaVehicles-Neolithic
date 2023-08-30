@@ -18,12 +18,15 @@
 			<li Class="VanillaVehiclesExpanded.StatExtension">
 				<statToAdd>
 					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
 				</statToAdd>
 				<statValues>
 					<li>AV_Tier0</li>
+					<li>AV_TractionHuman</li>
 				</statValues>
 				<statDescriptions>
 					<li>AV_Tier0Desc</li>
+					<li>AV_TractionHumanDesc</li>
 				</statDescriptions>
 			</li>
 		</modExtensions>
@@ -67,7 +70,7 @@
 			<customRoadCosts AssignDefaults="0.7"/>
 			<diagonalRotation>false</diagonalRotation>
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 3)</li>
+				<li>(RepairVehicle, 1)</li>
 			</vehicleJobLimitations>
 			<roles>
 				<li>

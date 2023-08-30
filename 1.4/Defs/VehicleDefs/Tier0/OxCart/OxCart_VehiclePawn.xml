@@ -9,21 +9,27 @@
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(5.5,5.5)</drawSize>
-			<color>(192, 146, 94)</color>
-			<colorTwo>(193, 138, 86)</colorTwo>
-			<colorThree>(184, 119, 59)</colorThree>
-			<pattern>AV_Pattern_Wood_2</pattern>
+			<color>(58, 41, 10)</color>
+			<colorTwo>(59, 32, 12)</colorTwo>
+			<colorThree>(57, 39, 19)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
 		</graphicData>
 		<modExtensions>
 			<li Class="VanillaVehiclesExpanded.StatExtension">
 				<statToAdd>
 					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+					<li>AV_FuelRate</li>
 				</statToAdd>
 				<statValues>
 					<li>AV_Tier0</li>
+					<li>AV_TractionAnimal</li>
+					<li>AV_Fue10-250</li>
 				</statValues>
 				<statDescriptions>
 					<li>AV_Tier0Desc</li>
+					<li>AV_TractionAnimalDesc</li>
+					<li>AV_Fue10-250Desc</li>
 				</statDescriptions>
 			</li>
 		</modExtensions>

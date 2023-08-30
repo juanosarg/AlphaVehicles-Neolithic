@@ -4,7 +4,7 @@
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
 		<defName>AV_Wheelbarrow_Blueprint</defName>
 		<label>Wheelbarrow</label>
-		<description>The wheelbarrow: Your trusty sidekick for moving stuff from 'point A' to 'point B' with all the pizzazz of a one-wheel parade float.\n\nLook, this is just a wheelbarrow. It will allow people to carry things. Yep. That's it.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		<description>The wheelbarrow: Your trusty sidekick for moving stuff from 'point A' to 'point B' with all the pizzazz of a one-wheel parade float.\n\nLook, this is just a wheelbarrow. It will allow people to carry things. Yep. That's it.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Driver will get 50% more tired and hungry while driving this vehicle.</description>
 		<designationCategory>VF_Vehicles</designationCategory>
 		
 		<graphicData>
