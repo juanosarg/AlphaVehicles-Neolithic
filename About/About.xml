@@ -25,10 +25,10 @@
 		</li>
 	</modDependencies>
 	<packageId>sarg.alphavehiclesneolithic</packageId>
-	<description>Adds 9 neolithic vehicles that don't need any research or infrastructure to build.
+	<description>Adds 11 neolithic vehicles that don't need any research or infrastructure to build.
 &lt;size=24&gt;Issues&lt;/size&gt;
 
-No issues tracked.
+No issues tracked, except the rough terrain issue mentioned in the dog sled.
 
 &lt;size=24&gt;Plans for the future&lt;/size&gt;
 
@@ -44,7 +44,7 @@ Should be compatible with any vehicle mods out there
 
 &lt;size=24&gt;Changelog&lt;/size&gt;
 
-v1.0: Release
+v1.0: Release (31/08/23)
 v0.1: Alpha
 
 
