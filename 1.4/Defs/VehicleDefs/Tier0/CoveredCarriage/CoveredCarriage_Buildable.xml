@@ -15,7 +15,7 @@
 		
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
-			<WorkToBuild>1000</WorkToBuild>
+			<WorkToBuild>5500</WorkToBuild>
 			<Flammability>1</Flammability>
 		</statBases>
 		

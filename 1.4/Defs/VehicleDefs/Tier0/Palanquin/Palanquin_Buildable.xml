@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_Palanquin_Blueprint</defName>
+		<label>Palanquin</label>
+		<description>A covered litter carried on poles on the shoulders of two bearers. A palanquin is not an efficient mode of transportation.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x2, Passenger x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Drivers will get 50% more tired and hungry while driving this vehicle. Passenger will be much more comfortable.</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Palanquin/AV_Palanquin</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4.5,4.5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>1500</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(1,4)</size>
+		<uiIconScale>1</uiIconScale>
+				
+		<costList>
+			<WoodLog>250</WoodLog>			
+			<Steel>10</Steel>		
+			<Cloth>10</Cloth>	
+			<Gold>5</Gold>			
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Palanquin</thingToSpawn>
+		
+		
+	</Vehicles.VehicleBuildDef>
+</Defs>

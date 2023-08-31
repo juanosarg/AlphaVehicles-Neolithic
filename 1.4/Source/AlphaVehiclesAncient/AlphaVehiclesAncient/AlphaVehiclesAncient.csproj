@@ -301,7 +301,7 @@
     <Compile Include="AudioGrains\AudioGrain_SeveralFolders.cs" />
     <Compile Include="Comps\CompAddHediffToVehiclePassenger.cs" />
     <Compile Include="Comps\CompProperties\CompProperties_AddHediffToVehiclePassenger.cs" />
-    <Compile Include="DefOfs\InternalDefOf.cs" />
+    <Compile Include="Defs\HediffToRoles.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="Harmony\VehiclePawn_RemovePawn.cs" />
     <Compile Include="Harmony\VehiclePawn_Notify_BoardedCaravan.cs" />
@@ -311,8 +311,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StaticCollections\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

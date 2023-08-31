@@ -13,11 +13,27 @@
 		
 		<stages>
 			<li>
-				<hungerRateFactorOffset>1.5</hungerRateFactorOffset>
-				<restFallFactorOffset>1.5</restFallFactorOffset>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<restFallFactorOffset>0.5</restFallFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>
 	
-	
+		<HediffDef>
+		<defName>AV_Restful</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>restful</label>
+		<description>This person is being carried in a luxurious vehicle, making them well rested and content.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		
+		<stages>
+			<li>
+			
+				<restFallFactorOffset>-0.75</restFallFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

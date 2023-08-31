@@ -12,8 +12,8 @@ namespace AlphaVehicles
    
     public class CompProperties_AddHediffToVehiclePassenger : VehicleCompProperties
     {
-        public HediffDef hediffToAdd;
-    
+        public List<HediffToRoles> hediffsToAdd;
+
         public CompProperties_AddHediffToVehiclePassenger()
         {
             compClass = typeof(CompAddHediffToVehiclePassenger);

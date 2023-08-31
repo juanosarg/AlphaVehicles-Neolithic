@@ -34,9 +34,9 @@
 
 	<!-- Stats Descriptions -->
 	
-	<AV_Tier0Desc>Tier 0 vehicles are below tier 1 in terms of simplicity. These are things like wheelbarrows and oxen carts. Usually they don't need any research projects to be built, but they are very, very underpowered.</AV_Tier0Desc>
-	<AV_Tier1Desc>Tier 1 vehicles are the most basic and easiest to access. They are usually locked behind a very basic and general research project. They are inefficient, not ideal, have a lot of drawbacks, but they are cheap and quick to make.</AV_Tier1Desc>
-	<AV_Tier2Desc>Tier 2 vehicles are locked behind a more specialized research project and are more efficient than Tier 1. They are however more expensive and take a longer time to construct. Tier 2 vehicles are a "baseline" vehicle category.</AV_Tier2Desc>
+	<AV_Tier0Desc>Tier 0 vehicles are the most basic and easiest to access. They don't require resources to be constructed, or research project to be researched, or both.</AV_Tier0Desc>
+	<AV_Tier1Desc>Tier 1 vehicles require a basic research project and a low resource cost in order to be constructed. They are inefficient, not ideal, have a lot of drawbacks, but they are cheap and available early in the game.</AV_Tier1Desc>
+	<AV_Tier2Desc>Tier 2 vehicles are locked behind more specialised research projects and require resources that are only available later in the game. Tier 2 is considered to be the 'baseline' of all vehicles.</AV_Tier2Desc>
 	
 	<AV_TractionHumanDesc>Human-powered vehicles consume no fuel. There is however a price to pay: the driver of a human-powered vehicle will get 50% more tired and hungry while driving it.</AV_TractionHumanDesc>
 	<AV_TractionAnimalDesc>This vehicle is powered by animals. It will require no traditional fuel, but the animals need to be fed or they will refuse to move. The vehicle's animals will consume this food even when not in use. This is usually Hay or Kibble. Animals will not die if the "fuel" runs out because I'm not that cruel.</AV_TractionAnimalDesc>

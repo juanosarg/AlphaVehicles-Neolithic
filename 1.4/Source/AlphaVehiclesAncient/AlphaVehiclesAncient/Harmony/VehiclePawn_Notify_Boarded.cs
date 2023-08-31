@@ -26,7 +26,24 @@ namespace AlphaVehicles
 
             if (__instance.TryGetComp<CompAddHediffToVehiclePassenger>() is CompAddHediffToVehiclePassenger comp && comp != null)
             {
-                pawnToBoard.health.AddHediff(comp.Props.hediffToAdd);
+                
+                foreach(VehicleHandler handler in __instance.handlers)
+                {
+                    foreach(HediffToRoles hedifftoroles in comp.Props.hediffsToAdd) {
+
+                        if (handler.role.key == hedifftoroles.role && handler.handlers.Contains(pawnToBoard))
+                        {
+                            pawnToBoard.health.AddHediff(hedifftoroles.hediff);
+                        }
+
+                    }
+
+                    
+                }
+                
+
+
+                
             }
 
         }

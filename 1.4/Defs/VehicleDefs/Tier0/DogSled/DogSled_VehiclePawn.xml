@@ -49,7 +49,7 @@
 		</statBases>
 		<vehicleStats>
 			<Mass>30</Mass>
-			<MoveSpeed>8</MoveSpeed>
+			<MoveSpeed>10</MoveSpeed>
 			<CargoCapacity>50</CargoCapacity>
 			<RepairRate>0.75</RepairRate>
 			<AccelerationRate>0.08</AccelerationRate>
@@ -98,44 +98,12 @@
 					<value>1</value>
 				</li>
 			</customBiomeCosts>
-			<customTerrainCosts Inherit="false">
+			<customTerrainCosts Inherit="false" AllowTerrainWithTag="Soil" PathCost="100">
 				<li>
 					<key>Ice</key>
 					<value>1</value>
 				</li>
-				<li>
-					<key>Soil</key>
-					<value>50</value>
-				</li>
 				
-				<li>
-					<key>MossyTerrain</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>MarshyTerrain</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>SoilRich</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>Gravel</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>Sand</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>SoftSand</key>
-					<value>50</value>
-				</li>
-				<li>
-					<key>Mud</key>
-					<value>50</value>
-				</li>
 			</customTerrainCosts>
 			<roles>
 				<li>

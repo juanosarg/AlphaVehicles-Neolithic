@@ -26,10 +26,19 @@ namespace AlphaVehicles
 
             if (__instance.TryGetComp<CompAddHediffToVehiclePassenger>() is CompAddHediffToVehiclePassenger comp && comp != null)
             {
-                if (pawn.health.hediffSet.GetFirstHediffOfDef(comp.Props.hediffToAdd) != null)
+
+                foreach (HediffToRoles hedifftoroles in comp.Props.hediffsToAdd)
                 {
-                    pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(comp.Props.hediffToAdd));
+
+                    if (pawn.health.hediffSet.GetFirstHediffOfDef(hedifftoroles.hediff) != null)
+                    {
+                        pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(hedifftoroles.hediff));
+                    }
+
                 }
+
+
+                
                 
             }
 

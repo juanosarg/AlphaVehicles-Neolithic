@@ -3,7 +3,7 @@
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>AV_WarChariot_Turret</defName>
 		<label>war chariot archer</label>
-		<description>A chariot-mounted longbow.</description>
+		<description>A chariot-mounted longbow. Quite inaccurate due to all the movement, but very cheap to fire.</description>
 		<turretType>Rotatable</turretType>
 		<shotSound>Bow_Large</shotSound>
 		<projectile>Arrow_Great</projectile>
