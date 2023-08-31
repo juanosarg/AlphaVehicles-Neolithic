@@ -16,7 +16,7 @@
 		</graphicData>
 		<projectile>
 			<damageDef>Bomb</damageDef>
-			<explosionRadius>2.9</explosionRadius>
+			<explosionRadius>1.9</explosionRadius>
 			<speed>25</speed>
 			<damageAmountBase>10</damageAmountBase>
 			<arcHeightFactor>0.8</arcHeightFactor>
