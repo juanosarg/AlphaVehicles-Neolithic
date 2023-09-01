@@ -112,7 +112,7 @@
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleLauncher">
 				<controlInFlight>false</controlInFlight>
-				<launchProtocol Class="Vehicles.VTOLTakeoff">
+				<launchProtocol Class="Vehicles.DefaultTakeoff">
 					<maxFlightNodes>1</maxFlightNodes>
 					<launchProperties>
 						<maxTicks>3000</maxTicks>
