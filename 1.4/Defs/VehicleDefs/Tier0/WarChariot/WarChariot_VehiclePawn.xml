@@ -252,9 +252,9 @@
 						<turretDef>AV_WarChariot_Turret</turretDef>
 						<drawLayer>3</drawLayer>
 						<renderProperties>
-							<north>(0,-0.5,0)</north>
-							<south>(0,1.75,0)</south>
-							<east>(-1.15,0,0.25)</east>
+							<north>(0,-0.5)</north>
+							<south>(0,1.75)</south>
+							<east>(-1.15,0.25)</east>
 						</renderProperties>
 						
 						<gizmoLabel>Archer</gizmoLabel>
