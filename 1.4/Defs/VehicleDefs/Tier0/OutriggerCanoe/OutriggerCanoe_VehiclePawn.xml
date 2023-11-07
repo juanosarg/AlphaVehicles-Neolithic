@@ -114,7 +114,7 @@
 					<exposed>true</exposed>
 					
 					<hitbox>
-						<side>BodyNoOverlap</side>
+						<side>Body</side>
 						<noOverlapWith>
 							<li>Back</li>
 						</noOverlapWith>
