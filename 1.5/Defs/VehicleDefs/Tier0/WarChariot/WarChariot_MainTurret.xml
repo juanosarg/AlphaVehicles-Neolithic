@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>AV_WarChariot_Turret</defName>
+		<label>war chariot archer</label>
+		<description>A chariot-mounted longbow. Quite inaccurate due to all the movement, but very cheap to fire.</description>
+		<turretType>Rotatable</turretType>
+		<shotSound>Bow_Large</shotSound>
+		<projectile>Arrow_Great</projectile>
+		<reloadTimer>1</reloadTimer>
+		<warmUpTimer>2</warmUpTimer>
+		<magazineCapacity>1</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+		<genericAmmo>true</genericAmmo>
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2</rotationSpeed>
+		<projectileOffset>0.5</projectileOffset>
+		<hitFlags>IntendedTarget</hitFlags>
+		<maxRange>29.9</maxRange>
+		<minRange>2</minRange>
+		
+		<attachProjectileFlag>VVE_Tank</attachProjectileFlag>
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenBursts>1</ticksBetweenBursts>
+				<spreadRadius>0</spreadRadius>
+				<label>Single Shot</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/WarChariot/AV_ArcherTurret</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

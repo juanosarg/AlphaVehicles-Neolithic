@@ -1,0 +1,12 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Ancient\1.4\Assemblies\AlphaVehiclesAncient.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Ancient\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Ancient\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Ancient\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.4\Assemblies\AlphaVehiclesAncient.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.4\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.5\Assemblies\AlphaVehiclesAncient.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.5\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.5\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles-Neolithic\1.5\Source\AlphaVehiclesAncient\AlphaVehiclesAncient\obj\Debug\AlphaVehiclesAncient.dll

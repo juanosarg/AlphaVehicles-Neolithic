@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles\1.4\Assemblies\AlphaVehicles.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles\1.4\Source\AlphaVehicles\AlphaVehicles\obj\Debug\AlphaVehicles.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles\1.4\Source\AlphaVehicles\AlphaVehicles\obj\Debug\AlphaVehicles.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaVehicles\1.4\Source\AlphaVehicles\AlphaVehicles\obj\Debug\AlphaVehicles.dll

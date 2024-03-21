@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.VehicleFleshTypeDef>
+		<defName>AV_WoodenAndHorseVehicle</defName>
+		<corpseCategory>CorpsesMechanoid</corpseCategory>
+		
+		<nonPenetrationEffect>DamageDiminished_General</nonPenetrationEffect>
+		<diminishedEffect>DamageDiminished_General</diminishedEffect>
+		<deflectionEffect>Deflect_General</deflectionEffect>
+		<deflectionEffectBullet>Deflect_General_Bullet</deflectionEffectBullet>
+		
+		<soundImpactDeflect>Deflect_Metal</soundImpactDeflect>
+		<soundImpactDiminished>AV_BulletImpact_Wood_And_Horse</soundImpactDiminished>
+		<soundImpactNonPenetrated>AV_BulletImpact_Wood_And_Horse</soundImpactNonPenetrated>
+		<soundImpactPenetrated>AV_BulletImpact_Wood_And_Horse</soundImpactPenetrated>
+		
+	
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechC</texture>
+			</li>
+		</genericWounds>
+	</Vehicles.VehicleFleshTypeDef>
+	
+	<Vehicles.VehicleFleshTypeDef>
+		<defName>AV_WoodenAndOxVehicle</defName>
+		<corpseCategory>CorpsesMechanoid</corpseCategory>
+		
+		<nonPenetrationEffect>DamageDiminished_General</nonPenetrationEffect>
+		<diminishedEffect>DamageDiminished_General</diminishedEffect>
+		<deflectionEffect>Deflect_General</deflectionEffect>
+		<deflectionEffectBullet>Deflect_General_Bullet</deflectionEffectBullet>
+		
+		<soundImpactDeflect>Deflect_Metal</soundImpactDeflect>
+		<soundImpactDiminished>AV_BulletImpact_Wood_And_Ox</soundImpactDiminished>
+		<soundImpactNonPenetrated>AV_BulletImpact_Wood_And_Ox</soundImpactNonPenetrated>
+		<soundImpactPenetrated>AV_BulletImpact_Wood_And_Ox</soundImpactPenetrated>
+		
+	
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechC</texture>
+			</li>
+		</genericWounds>
+	</Vehicles.VehicleFleshTypeDef>
+	
+	<Vehicles.VehicleFleshTypeDef>
+		<defName>AV_WoodenAndDogVehicle</defName>
+		<corpseCategory>CorpsesMechanoid</corpseCategory>
+		
+		<nonPenetrationEffect>DamageDiminished_General</nonPenetrationEffect>
+		<diminishedEffect>DamageDiminished_General</diminishedEffect>
+		<deflectionEffect>Deflect_General</deflectionEffect>
+		<deflectionEffectBullet>Deflect_General_Bullet</deflectionEffectBullet>
+		
+		<soundImpactDeflect>Deflect_Metal</soundImpactDeflect>
+		<soundImpactDiminished>AV_BulletImpact_Wood_And_Dogs</soundImpactDiminished>
+		<soundImpactNonPenetrated>AV_BulletImpact_Wood_And_Dogs</soundImpactNonPenetrated>
+		<soundImpactPenetrated>AV_BulletImpact_Wood_And_Dogs</soundImpactPenetrated>
+		
+	
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundMechC</texture>
+			</li>
+		</genericWounds>
+	</Vehicles.VehicleFleshTypeDef>
+	
+
+</Defs>

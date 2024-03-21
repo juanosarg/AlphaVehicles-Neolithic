@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_Hwacha_Blueprint</defName>
+		<label>Hwacha</label>
+		<description>A primitive type of artillery designed to fire multiple rocket-powered iron-tipped arrows at once. The Hwacha consists of a wooden frame with a series of iron tubes mounted on top, which can hold up to 200 arrows. When fired, the Hwacha creates a very inaccurate barrage of projectiles that can inflict significant damage to enemy fortifications and troops.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Driver will get 50% more tired and hungry while driving this vehicle.</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Hwacha/AV_Hwacha</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+				
+		<costList>
+			<WoodLog>125</WoodLog>			
+			<Steel>10</Steel>	
+			<Cloth>10</Cloth>				
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		
+		<thingToSpawn>AV_Hwacha</thingToSpawn>
+		
+		
+	</Vehicles.VehicleBuildDef>
+</Defs>

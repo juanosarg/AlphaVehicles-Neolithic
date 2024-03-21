@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_Balloon_Blueprint</defName>
+		<label>Balloon</label>
+		<description>A lighter-than-air aircraft consisting of a bag, called an envelope, which contains heated air. Suspended beneath is a wicker basket which carries passengers and a source of heat.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x1</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Air/Tier0/Balloon/AV_Balloon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(15,15)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<uiIconPath>Things/Vehicles/Air/Tier0/Balloon/AV_BalloonUI</uiIconPath>
+		<rotatable>false</rotatable>
+
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(1,1)</size>
+		
+	
+		
+		<costList>
+			
+			<Cloth>150</Cloth>
+			<Steel>10</Steel>
+			<WoodLog>30</WoodLog>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		<thingToSpawn>AV_Balloon</thingToSpawn>
+		
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

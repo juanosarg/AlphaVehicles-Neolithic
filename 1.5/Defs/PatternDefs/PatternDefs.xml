@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.PatternDef>
+		<defName>AV_Pattern_Wood</defName>
+		<label>Wood Grain</label>
+		<path>Patterns/WoodGrain/AV_Pattern_Wood</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.PatternDef>
+		<defName>AV_Pattern_Wood_2</defName>
+		<label>Wood Grain 2</label>
+		<path>Patterns/WoodGrain2/AV_Pattern_Wood2</path>
+	</Vehicles.PatternDef>
+	
+
+</Defs>

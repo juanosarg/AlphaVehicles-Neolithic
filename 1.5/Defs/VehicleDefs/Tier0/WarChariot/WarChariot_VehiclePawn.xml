@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_WarChariot</defName>
+		<label>War chariot</label>
+		<description>The war chariot is a mobile archery platform operated by two people, with the driver steering the chariot with his reins while the main archer aims his bow and arrow at any targets within range.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Archer x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/WarChariot/AV_WarChariot</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(4.5,4.5)</drawSize>
+			<color>(192, 146, 94)</color>
+			<colorTwo>(193, 138, 86)</colorTwo>
+			<colorThree>(184, 119, 59)</colorThree>
+			<pattern>AV_Pattern_Wood_2</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+					<li>AV_FuelRate</li>
+					<li>AV_MainTurretAmmo</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionAnimal</li>
+					<li>AV_Fue6-100</li>
+					<li>AV_Wood75</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionAnimalDesc</li>
+					<li>AV_Fue6-100Desc</li>
+					<li>AV_Wood75SingleDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>0.5</fillPercent>
+		<buildDef>AV_WarChariot_Blueprint</buildDef>
+		<size>(2,4)</size>
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>60</Mass>
+			<MoveSpeed>8</MoveSpeed>
+			<CargoCapacity>40</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
+			<AccelerationRate>0.08</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Horse</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>2.5</baseBodySize>
+			<fleshType>AV_WoodenAndHorseVehicle</fleshType>
+		</race>
+		
+		<properties>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			<offRoadMultiplier>3</offRoadMultiplier>
+			
+			<customRoadCosts AssignDefaults = "0.4"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>rider</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>2</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,-0.55)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,1)</drawOffsetSouth>
+						<drawOffsetEast>(-0.55,0,0.25)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>archer</key>
+					<label>Archer</label>
+					<slots>1</slots>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>archerTurret</li>
+					</turretIds>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>2</layerNorth>
+						<layerSouth>1</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,-1.15)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,1.45)</drawOffsetSouth>
+						<drawOffsetEast>(-1.35,0,0.25)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		<components>
+			<li>
+				<key>LeftWheel</key>
+				<label>Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightWheel</key>
+				<label>Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>10</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftHorse</key>
+				<label>Left Horse</label>
+				<health>100</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Horse</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightHorse</key>
+				<label>Right Horse</label>
+				<health>100</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Horse</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			
+		</components>
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Hay</fuelType>
+				<fuelConsumptionRate>6</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>AV_WarChariot_Turret</turretDef>
+						<drawLayer>3</drawLayer>
+						<renderProperties>
+							<north>(0,-0.5)</north>
+							<south>(0,1.75)</south>
+							<east>(-1.15,0.25)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Archer</gizmoLabel>
+						
+						<angleRestricted/>
+						<aimPieOffset>(0, 0.5)</aimPieOffset>
+						
+						<key>archerTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>AV_CoveredCarriage_Blueprint</defName>
+		<label>Covered Carriage</label>
+		<description>A horse-drawn four-wheeled vehicle used to transport people. This particular carriage uses leather strapping suspension, making it more comfortable than otherwise. Can fit three passengers, plus the driver.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<designationCategory>VF_Vehicles</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/CoveredCarriage/AV_CoveredCarriage</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.5,5.5)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>5500</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<size>(3,5)</size>
+		<uiIconScale>1</uiIconScale>
+				
+		<costList>
+			<WoodLog>200</WoodLog>			
+			<Steel>30</Steel>	
+			<Hay>100</Hay>			
+		</costList>
+		
+		<soundImpactDefault>AV_BulletImpact_Wood_And_Horse</soundImpactDefault>
+		
+		<thingToSpawn>AV_CoveredCarriage</thingToSpawn>
+		
+		
+	</Vehicles.VehicleBuildDef>
+</Defs>

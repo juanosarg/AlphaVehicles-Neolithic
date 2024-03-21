@@ -3,7 +3,9 @@
 	<author>Sarg</author>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/AlphaVehiclesLogo</modIconPath>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -44,8 +46,7 @@ Should be compatible with any vehicle mods out there
 
 &lt;size=24&gt;Changelog&lt;/size&gt;
 
-v1.0: Release (31/08/23)
-v0.1: Alpha
+Full changelog on GitHub
 
 
 		</description>

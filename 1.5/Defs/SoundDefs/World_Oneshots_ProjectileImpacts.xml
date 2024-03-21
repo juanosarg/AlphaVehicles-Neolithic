@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+
+  <SoundDef>
+    <defName>AV_BulletImpact_Wood_And_Horse</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AlphaVehicles.AudioGrain_SeveralFolders">
+            <clipFolderPaths>
+				<li>Impact/Bullet_Wood</li>
+				<li>Pawn/Animal/Horse/Pain</li>
+			</clipFolderPaths>
+          </li>
+        </grains>      
+        <volumeRange>16~22.17392</volumeRange>      
+        <pitchRange>0.97~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>AV_BulletImpact_Wood_And_Ox</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AlphaVehicles.AudioGrain_SeveralFolders">
+            <clipFolderPaths>
+				<li>Impact/Bullet_Wood</li>
+				<li>Pawn/Animal/Muffalo/Muffalo_Pain</li>
+			</clipFolderPaths>
+          </li>
+        </grains>      
+        <volumeRange>16~22.17392</volumeRange>      
+        <pitchRange>0.97~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+    <SoundDef>
+    <defName>AV_BulletImpact_Wood_And_Dogs</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AlphaVehicles.AudioGrain_SeveralFolders">
+            <clipFolderPaths>
+				<li>Impact/Bullet_Wood</li>
+				<li>Pawn/Animal/Dog/Dog_Injured</li>
+			</clipFolderPaths>
+          </li>
+        </grains>      
+        <volumeRange>16~22.17392</volumeRange>      
+        <pitchRange>0.97~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+    
+  <SoundDef>
+    <defName>AV_Fireworks</defName>  
+    <context>MapOnly</context>   
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>AV_Fireworks</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>16~22.17392</volumeRange>      
+        <pitchRange>0.97~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+ 
+
+</Defs>
