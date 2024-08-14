@@ -215,6 +215,7 @@
 				<fuelConsumptionRate>10</fuelConsumptionRate>
 				<fuelCapacity>250</fuelCapacity>
 				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
 			</li>
 		</comps>
 	</Vehicles.VehicleDef>

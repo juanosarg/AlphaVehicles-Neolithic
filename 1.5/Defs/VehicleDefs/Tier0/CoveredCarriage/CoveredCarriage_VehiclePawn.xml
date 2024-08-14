@@ -291,6 +291,7 @@
 				<fuelConsumptionRate>8</fuelConsumptionRate>
 				<fuelCapacity>100</fuelCapacity>
 				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
 			</li>
 			
 		</comps>

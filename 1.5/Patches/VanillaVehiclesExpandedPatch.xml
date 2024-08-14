@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Vehicles Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="VVE_GarageDoorAbstract" Name="AV_GarageDoorBase">
+							<defName>AV_GarageDoorWooden</defName>
+							<label>wooden garage door (1x4)</label>
+							<description>Divides rooms. Manual operation allows people to open it, letting vehicles through.</description>
+							<thingClass>VanillaVehiclesExpanded.GarageDoor</thingClass>
+							<stuffCategories Inherit="false">
+								<li>Woody</li>
+							</stuffCategories>
+							<passability>Impassable</passability>
+							<defaultPlacingRot>South</defaultPlacingRot>
+							<statBases>
+								<WorkToBuild>2000</WorkToBuild>
+								<MaxHitPoints>85</MaxHitPoints>
+								<Flammability>1</Flammability>
+							</statBases>
+							<size>(4, 1)</size>
+							<graphicData>
+								<texPath>Things/Building/AV_GarageDoorWooden4x1_Mover</texPath>
+								<graphicClass>Graphic_Single</graphicClass>
+								<drawSize>(1, 1)</drawSize>
+								<damageData>
+									<enabled>false</enabled>
+								</damageData>
+							</graphicData>
+							<uiIconPath>Things/Building/AV_GarageDoorWooden4x1_MenuIcon</uiIconPath>
+							<costStuffCount>75</costStuffCount>
+							<designationHotKey>Misc2</designationHotKey>
+							<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+						</ThingDef>
+						<ThingDef ParentName="AV_GarageDoorBase">
+							<defName>AV_GarageDoorWoodenOpened</defName>
+							<passability>Standable</passability>
+							<designationCategory IsNull="True"/>
+							<researchPrerequisites IsNull="True"/>
+							<blockLight>false</blockLight>
+							<fillPercent>0</fillPercent>
+						</ThingDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+

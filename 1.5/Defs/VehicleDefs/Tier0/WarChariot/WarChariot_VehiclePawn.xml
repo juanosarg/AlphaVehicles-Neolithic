@@ -245,6 +245,7 @@
 				<fuelConsumptionRate>6</fuelConsumptionRate>
 				<fuelCapacity>100</fuelCapacity>
 				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
