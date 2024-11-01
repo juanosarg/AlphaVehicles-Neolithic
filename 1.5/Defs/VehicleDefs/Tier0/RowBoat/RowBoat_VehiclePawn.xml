@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseSeaVehicle">
+		<defName>AV_RowBoat</defName>
+		<label>Row boat</label>
+		<description>A small, manually powered boat propelled by oars. Typically designed for calm waters like lakes and rivers, it has a sturdy, flat-bottomed hull for stability. Mostly useless in open waters.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionHuman</li>
+
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionHumanDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Vehicles/Sea/Tier0/RowBoat/AV_RowBoat</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(5,5)</drawSize>
+		
+			<color>(191, 178, 163)</color>
+			<colorTwo>(192, 168, 145)</colorTwo>
+			<colorThree>(170, 146, 122)</colorThree>
+			<pattern>AV_Pattern_Wood_2</pattern>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		
+		<buildDef>AV_RowBoat_Blueprint</buildDef>
+		
+		<size>(2,3)</size>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Sea</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<MarketValue>150</MarketValue>
+			<Flammability>1</Flammability>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>50</Mass>
+			<MoveSpeed>3</MoveSpeed>
+			<CargoCapacity>25</CargoCapacity>
+			<RepairRate>1</RepairRate>
+		</vehicleStats>
+		
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wind</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		
+		<comps>
+			<li Class="AlphaVehicles.CompProperties_AddHediffToVehiclePassenger">
+				<hediffsToAdd>
+					<li>
+						<hediff>AV_Exhausted</hediff>
+						<role>Rower</role>
+					</li>				
+				</hediffsToAdd>
+			</li>
+			
+		</comps>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<properties>
+			<fishing>true</fishing>
+			<diagonalRotation>false</diagonalRotation>
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			<riverCost>1</riverCost>
+			<worldSpeedMultiplier>0.65</worldSpeedMultiplier>
+			
+			<roles>
+				<li>
+					<key>Rower</key>
+					<label>Rower</label>
+					<exposed>true</exposed>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<hitbox>
+						<side>Back</side>
+					</hitbox>
+					
+					<pawnRenderer>
+						
+						<north>South</north>
+						<east>West</east>
+						<south>North</south>
+						<west>East</west>
+						<drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
+						<drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+						<drawOffsetEast>(0, 0, 0.5)</drawOffsetEast>
+						<drawOffsetWest>(0, 0, 0.5)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+				
+				
+			</roles>
+		</properties>
+		
+		<components>
+			
+			<li>
+				<key>WoodenHull</key>
+				<label>Main wooden hull</label>
+				<health>80</health>
+				<depth>External</depth>
+				
+			</li>
+			<li>
+				<key>Oars</key>
+				<label>Oars</label>
+				<health>20</health>
+				<depth>External</depth>
+				
+			
+			</li>
+		</components>
+		
+		
+	</Vehicles.VehicleDef>
+</Defs>
