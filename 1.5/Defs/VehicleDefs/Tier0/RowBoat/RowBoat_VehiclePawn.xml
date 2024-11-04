@@ -39,7 +39,7 @@
 		
 		<buildDef>AV_RowBoat_Blueprint</buildDef>
 		
-		<size>(2,3)</size>
+		<size>(1,3)</size>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
