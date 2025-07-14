@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_CoveredCarriage</defName>
+		<label>Covered Carriage</label>
+		<description>A horse-drawn four-wheeled vehicle used to transport people. This particular carriage uses leather strapping suspension, making it more comfortable than otherwise. Can fit three passengers, plus the driver.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x3\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/CoveredCarriage/AV_CoveredCarriage</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(5.5,5.5)</drawSize>
+			<color>(80, 63, 32)</color>
+			<colorTwo>(74, 52, 16)</colorTwo>
+			<colorThree>(67, 47, 18)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+					<li>AV_FuelRate</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionAnimal</li>
+					<li>AV_Fuel8-100</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionAnimalDesc</li>
+					<li>AV_Fuel8-100Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>1</fillPercent>
+		<buildDef>AV_CoveredCarriage_Blueprint</buildDef>
+		<size>(3,5)</size>
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>250</Mass>
+			<MoveSpeed>8</MoveSpeed>
+			<CargoCapacity>70</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
+			<AccelerationRate>0.01</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Horse</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>2.5</baseBodySize>
+			<fleshType>AV_WoodenAndHorseVehicle</fleshType>
+		</race>
+		
+		<properties>
+			<winterSpeedMultiplier>5</winterSpeedMultiplier>
+			<offRoadMultiplier>2</offRoadMultiplier>
+			
+			<customRoadCosts AssignDefaults = "0.3"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>rider</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>0</layerNorth>
+						<layerSouth>1</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,0)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,-0.25)</drawOffsetSouth>
+						<drawOffsetEast>(0.4,0,0.75)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>passenger_rear</key>
+					<label>Rear Passenger</label>
+					<slots>3</slots>
+					
+					<hitbox>
+						<cells>
+							<li>(0, 1)</li>
+							<li>(1, 1)</li>
+							<li>(0, 0)</li>
+							<li>(1, 0)</li>
+						</cells>
+					</hitbox>
+				</li>
+			</roles>
+		</properties>
+		<components>
+			<li>
+				<key>FrontLeftWheel</key>
+				<label>Front Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(0, 2)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FrontRightWheel</key>
+				<label>Front Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(1, 2)</li>
+					</cells>
+				</hitbox>
+			</li>
+			<li>
+				<key>BackLeftWheel</key>
+				<label>Back Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(0, -1)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BackRightWheel</key>
+				<label>Back Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<cells>
+						<li>(1, -1)</li>
+					</cells>
+				</hitbox>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>10</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftHorse</key>
+				<label>Left Horse</label>
+				<health>100</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Horse</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightHorse</key>
+				<label>Right Horse</label>
+				<health>100</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Horse</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			
+		</components>
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Hay</fuelType>
+				<fuelConsumptionRate>8</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+			</li>
+			
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

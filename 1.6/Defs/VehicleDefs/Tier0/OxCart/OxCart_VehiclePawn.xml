@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_OxCart</defName>
+		<label>Ox cart</label>
+		<description>A two wheeled cart pulled by oxen. A means of transportation used since ancient times, the ox cart is generally used to carry goods, such as agrarian produce or lumber. Terrible outside roads.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n&lt;color=#bb8f04&gt;Fuel type:&lt;/color&gt; Hay</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/OxCart/AV_OxCart</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(5.5,5.5)</drawSize>
+			<color>(58, 41, 10)</color>
+			<colorTwo>(59, 32, 12)</colorTwo>
+			<colorThree>(57, 39, 19)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+					<li>AV_FuelRate</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionAnimal</li>
+					<li>AV_Fue10-250</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionAnimalDesc</li>
+					<li>AV_Fue10-250Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>0.5</fillPercent>
+		<buildDef>AV_OxCart_Blueprint</buildDef>
+		<size>(3,5)</size>
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>200</Mass>
+			<MoveSpeed>6</MoveSpeed>
+			<CargoCapacity>300</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
+			<AccelerationRate>0.02</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wagon</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>4</baseBodySize>
+			<fleshType>AV_WoodenAndOxVehicle</fleshType>
+		</race>
+		
+		<properties>
+			<winterSpeedMultiplier>3</winterSpeedMultiplier>
+			<offRoadMultiplier>5</offRoadMultiplier>
+			
+			<customRoadCosts AssignDefaults = "0.3"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>rider</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>1</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.25)</drawOffsetSouth>
+						<drawOffsetEast>(0,0,0.25)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		<components>
+			<li>
+				<key>LeftWheel</key>
+				<label>Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightWheel</key>
+				<label>Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>10</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftOx</key>
+				<label>Left Ox</label>
+				<health>150</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Ox</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightOx</key>
+				<label>Right Ox</label>
+				<health>150</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Ox</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			
+		</components>
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>Hay</fuelType>
+				<fuelConsumptionRate>10</fuelConsumptionRate>
+				<fuelCapacity>250</fuelCapacity>
+				<fuelConsumptionCondition>Always</fuelConsumptionCondition>
+				<autoRefuelPercent>0.5</autoRefuelPercent>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

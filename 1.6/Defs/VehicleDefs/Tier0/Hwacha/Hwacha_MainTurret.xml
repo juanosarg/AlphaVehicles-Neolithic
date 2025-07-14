@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef>
+		<defName>AV_Proj_ExplosiveArrow</defName>
+		<label>explosive arrow</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<texPath>Things/Projectiles/AV_ArrowProjectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<explosionRadius>1.9</explosionRadius>
+			<speed>25</speed>
+			<damageAmountBase>10</damageAmountBase>
+			<arcHeightFactor>0.8</arcHeightFactor>
+			<soundExplode>Explosion_Rocket</soundExplode>
+		</projectile>
+	</ThingDef>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>AV_Hwacha_Turret</defName>
+		<label>arrow barrage</label>
+		<description>A devastating barrage of explosive arrows that can inflict significant damage to enemy fortifications and troops... if it hits.</description>
+		<turretType>Static</turretType>
+		<shotSound>AV_Fireworks</shotSound>
+		<projectile>AV_Proj_ExplosiveArrow</projectile>
+		<reloadTimer>10</reloadTimer>
+		<warmUpTimer>4.5</warmUpTimer>
+		<magazineCapacity>8</magazineCapacity>
+		<chargePerAmmoCount>1</chargePerAmmoCount>
+		<genericAmmo>true</genericAmmo>
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>1.2</rotationSpeed>
+		<restrictionType>Vehicles.TurretRestrictions_Stationary</restrictionType>
+		<projectileOffset>2.5</projectileOffset>
+	
+		<maxRange>30</maxRange>
+		<minRange>8</minRange>
+		<attachProjectileFlag>VVE_Tank</attachProjectileFlag>
+		<vehicleRecoil>
+			<distanceTotal>0.1</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.55</speedMultiplierPostRecoil>
+		</vehicleRecoil>
+		<fireModes>
+			<li>
+				<shotsPerBurst>8</shotsPerBurst>
+				<ticksBetweenBursts>10</ticksBetweenBursts>
+				<spreadRadius>15</spreadRadius>
+				<label>Barrage</label>
+				<texPath>UI/Gizmos/AV_ArrowBarrage</texPath>
+			</li>
+		</fireModes>
+		<graphicData>
+			<texPath>UI/Empty/Empty</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>(1, 1)</drawSize>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</ammunition>
+		<motes>
+			<li>
+				<cycles>1</cycles>
+				<moteDef>Mote_CannonPlume</moteDef>
+				<animationType>Reset</animationType>
+			</li>
+		</motes>
+	</Vehicles.VehicleTurretDef>
+</Defs>

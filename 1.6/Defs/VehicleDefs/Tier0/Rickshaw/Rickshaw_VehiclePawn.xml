@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_Rickshaw</defName>
+		<label>Rickshaw</label>
+		<description>A mode of human-powered transport by which a runner draws a two-wheeled cart which seats another person. Not very comfortable, at least for one of them...\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1, Passenger x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Driver will get 50% more tired and hungry while driving this vehicle.</description>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Rickshaw/AV_Rickshaw</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<color>(124, 85, 62)</color>
+			<colorTwo>(97, 70, 54)</colorTwo>
+			<colorThree>(78, 56, 53)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionHuman</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionHumanDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>0.5</fillPercent>
+		<buildDef>AV_Rickshaw_Blueprint</buildDef>
+		<size>(1,2)</size>
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>150</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>25</Mass>
+			<MoveSpeed>4</MoveSpeed>
+			<CargoCapacity>5</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<AccelerationRate>0.01</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wagon</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		<comps>
+			<li Class="AlphaVehicles.CompProperties_AddHediffToVehiclePassenger">
+				<hediffsToAdd>
+					<li>
+						<hediff>AV_Exhausted</hediff>
+						<role>Operator</role>
+					</li>				
+				</hediffsToAdd>
+			</li>
+		</comps>
+		<properties>
+			<customRoadCosts AssignDefaults="0.7"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>Operator</key>
+					<label>Operator</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>-1</layerNorth>
+						<layerSouth>1</layerSouth>
+					
+						<drawOffsetNorth>(0,0,0.75)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,-0.75)</drawOffsetSouth>
+						<drawOffsetEast>(0.75,0,0)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>1</slots>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+				
+					<exposed>true</exposed>
+					
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>2</layerSouth>
+						
+						<drawOffsetNorth>(0,0,0)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.5)</drawOffsetSouth>
+						<drawOffsetEast>(-0.25,0,0.5)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		<components>
+			<li>
+				<key>LeftWheel</key>
+				<label>Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+			
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightWheel</key>
+				<label>Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>10</health>
+				<depth>External</depth>
+			
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Handles</key>
+				<label>Handles</label>
+				<health>10</health>
+				<depth>External</depth>
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+	</Vehicles.VehicleDef>
+</Defs>

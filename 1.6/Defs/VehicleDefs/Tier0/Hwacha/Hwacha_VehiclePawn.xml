@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_Hwacha</defName>
+		<label>Hwacha</label>
+		<description>A primitive type of artillery designed to fire multiple rocket-powered iron-tipped arrows at once. The Hwacha consists of a wooden frame with a series of iron tubes mounted on top, which can hold up to 200 arrows. When fired, the Hwacha creates a very inaccurate barrage of projectiles that can inflict significant damage to enemy fortifications and troops.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Driver will get 50% more tired and hungry while driving this vehicle.</description>
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Hwacha/AV_Hwacha</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2,2)</drawSize>
+			<color>(124, 85, 62)</color>
+			<colorTwo>(97, 70, 54)</colorTwo>
+			<colorThree>(78, 56, 53)</colorThree>
+			<pattern>AV_Pattern_Wood</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+					<li>AV_MainTurretAmmo</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionHuman</li>
+					<li>AV_Wood75</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionHumanDesc</li>
+					<li>AV_Wood75Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>0.5</fillPercent>
+		<buildDef>AV_Hwacha_Blueprint</buildDef>
+		<size>(1,1)</size>
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>350</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>20</Mass>
+			<MoveSpeed>3</MoveSpeed>
+			<CargoCapacity>30</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
+			<AccelerationRate>0.01</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			<li>
+				<key>MoveStart</key>
+				<value>AV_Wagon</value>
+			</li>
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		<comps>
+			<li Class="AlphaVehicles.CompProperties_AddHediffToVehiclePassenger">
+				<hediffsToAdd>
+					<li>
+						<hediff>AV_Exhausted</hediff>
+						<role>Operator</role>
+					</li>				
+				</hediffsToAdd>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>AV_Hwacha_Turret</turretDef>
+						
+						
+						
+						<gizmoLabel>Arrow Barrage</gizmoLabel>
+						
+						<angleRestricted>(315, 45)</angleRestricted>
+						<aimPieOffset>(0, 1.5)</aimPieOffset>
+						
+						<key>mainTurret</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		<properties>
+			<customRoadCosts AssignDefaults="0.7"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>Operator</key>
+					<label>Operator</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>Movement, Turret</handlingTypes>
+					<turretIds>
+						<li>mainTurret</li>
+					</turretIds>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>-1</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,-0.85)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.85)</drawOffsetSouth>
+						<drawOffsetEast>(-0.95,0,0)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		<components>
+			<li>
+				<key>LeftWheel</key>
+				<label>Left Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>RightWheel</key>
+				<label>Right Wheel</label>
+				<health>30</health>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Blunt>0</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+				</armor>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>10</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+					<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Handles</key>
+				<label>Handles</label>
+				<health>10</health>
+				<depth>External</depth>
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+	</Vehicles.VehicleDef>
+</Defs>

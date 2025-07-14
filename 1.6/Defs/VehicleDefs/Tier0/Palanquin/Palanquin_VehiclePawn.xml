@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>AV_Palanquin</defName>
+		<label>Palanquin</label>
+		<description>A covered litter carried on poles on the shoulders of two bearers. A palanquin is not an efficient mode of transportation.\n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x2, Passenger x1\n\n&lt;color=#bb8f04&gt;Human-powered:&lt;/color&gt; Drivers will get 50% more tired and hungry while driving this vehicle. Passenger will be so much more comfortable that he'll get a bonus to his rest factor.</description>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Land/Tier0/Palanquin/AV_Palanquin</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(4.5,4.5)</drawSize>
+			<color>(108, 71, 62)</color>
+			<colorTwo>(119, 66, 60)</colorTwo>
+			<colorThree>(149, 96, 90)</colorThree>
+			<pattern>AV_Pattern_Wood_2</pattern>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>AV_VehicleTier</li>
+					<li>AV_Traction</li>
+				</statToAdd>
+				<statValues>
+					<li>AV_Tier0</li>
+					<li>AV_TractionHuman</li>
+				</statValues>
+				<statDescriptions>
+					<li>AV_Tier0Desc</li>
+					<li>AV_TractionHumanDesc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions>
+		<fillPercent>0.5</fillPercent>
+		<buildDef>AV_Palanquin_Blueprint</buildDef>
+		<size>(1,4)</size>
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Neolithic</techLevel>
+		<vehicleType>Land</vehicleType>
+		<statBases>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Flammability>1</Flammability>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<vehicleStats>
+			<Mass>50</Mass>
+			<MoveSpeed>4</MoveSpeed>
+			<CargoCapacity>5</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<AccelerationRate>0.01</AccelerationRate>
+		</vehicleStats>
+		<soundOneShotsOnEvent Inherit="false">
+			
+		</soundOneShotsOnEvent>
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		<comps>
+			<li Class="AlphaVehicles.CompProperties_AddHediffToVehiclePassenger">
+				<hediffsToAdd>
+					<li>
+						<hediff>AV_Exhausted</hediff>
+						<role>Operator1</role>
+					</li>
+					<li>
+						<hediff>AV_Exhausted</hediff>
+						<role>Operator2</role>
+					</li>
+					<li>
+						<hediff>AV_Restful</hediff>
+						<role>Passenger</role>
+					</li>						
+				</hediffsToAdd>
+			</li>
+		</comps>
+		<properties>
+			<customRoadCosts AssignDefaults="0.7"/>
+			<diagonalRotation>false</diagonalRotation>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 1)</li>
+			</vehicleJobLimitations>
+			<roles>
+				<li>
+					<key>Operator1</key>
+					<label>Operator</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>-1</layerNorth>
+						<layerSouth>1</layerSouth>
+					
+						<drawOffsetNorth>(0,0,1.75)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,-1.25)</drawOffsetSouth>
+						<drawOffsetEast>(1.75,0,-0.25)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>Operator2</key>
+					<label>Operator</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<pawnRenderer>
+						<layer>1</layer>
+						<layerNorth>1</layerNorth>
+						<layerSouth>-1</layerSouth>
+					
+						<drawOffsetNorth>(0,0,-1.25)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,1.75)</drawOffsetSouth>
+						<drawOffsetEast>(-1.75,0,-0.25)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>Passenger</key>
+					<label>Passenger</label>
+					<slots>1</slots>
+				
+				</li>
+			</roles>
+		</properties>
+		<components>
+			
+			<li>
+				<key>WoodenStructure</key>
+				<label>Wooden Structure</label>
+				<health>50</health>
+				<depth>External</depth>
+			
+				
+			</li>
+			<li>
+				<key>Handles</key>
+				<label>Handles</label>
+				<health>10</health>
+				<depth>External</depth>
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+	</Vehicles.VehicleDef>
+</Defs>
